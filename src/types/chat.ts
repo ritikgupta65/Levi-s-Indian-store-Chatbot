@@ -6,7 +6,7 @@ export interface Message {
   timestamp: Date;
 }
 
-export type ChatState = 'welcome' | 'chatting' | 'history' | 'faq';
+export type ChatState = 'welcome' | 'chatting' | 'history' | 'faq' | 'form';
 
 export interface QuickAction {
   label: string;

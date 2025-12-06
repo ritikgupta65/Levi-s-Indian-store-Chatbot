@@ -1,6 +1,6 @@
 
 import { useTheme } from '@/contexts/ThemeContext';
-import { MessageCircle, Clock, HelpCircle, Home } from 'lucide-react';
+import { MessageCircle, Clock, FileText, Home } from 'lucide-react';
 import { ChatState } from '@/types/chat';
 
 interface NavigationBarProps {
@@ -14,7 +14,7 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ currentView, onNavigate }
   const navItems = [
     { id: 'welcome' as ChatState, icon: Home, label: 'Home' },
     { id: 'history' as ChatState, icon: MessageCircle, label: 'Chats' },
-    { id: 'faq' as ChatState, icon: HelpCircle, label: 'FAQ' },
+    { id: 'form' as ChatState, icon: FileText, label: 'Form' },
   ];
 
   return (

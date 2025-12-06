@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import WelcomeScreenWidget from './WelcomeScreenWidget';
 import ChatWindow from './ChatWindow';
 import NavigationBar from './NavigationBar';
+import ContactForm from './ContactForm';
 import { Message, ChatState } from '@/types/chat';
 import { useVapi } from '@/hooks/useVapi';
 
@@ -144,6 +145,8 @@ const ChatInterface = () => {
               <NavigationBar currentView={chatState} onNavigate={setChatState} />
             </div>
           </div>
+        ) : chatState === 'form' ? (
+          <ContactForm onGoHome={goHome} />
         ) : (
           <ChatWindow
             messages={messages}
